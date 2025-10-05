@@ -1,3 +1,4 @@
+import { ChevronRight } from 'lucide-react'
 import React from 'react'
 
 const Updates = () => {
@@ -19,8 +20,14 @@ const Updates = () => {
           <img src="./" alt="Event 4" className='w-48 bg-gray-100 h-48'/>
           <img src="./" alt="Event 5" className='w-48 bg-gray-100 h-48'/>
         </div>
-        <div className='mt-12'>
+        <div className='mt-12 text-center space-y-2'>
           <h3 className='text-xl font-semibold'>Be a part of our programs</h3>
+          <p className='text-sm'>Join us in making a difference. Participate in our upcoming events and initiatives to support our cause.</p>
+          <div className='flex flex-wrap items-center justify-center gap-4 mt-8'>
+            <a href="/" className=' py-2 px-4 rounded-md flex items-center gap-2 bg-gray-100 text-sm'>Sign up as volunteer <ChevronRight className='size-5'/></a>
+            <a href="/" className=' py-2 px-4 rounded-md flex items-center gap-2 bg-gray-100 text-sm'>Sign up as volunteer <ChevronRight className='size-5'/></a>
+            <a href="/" className=' py-2 px-4 rounded-md flex items-center gap-2 bg-gray-100 text-sm'>Sign up as volunteer <ChevronRight className='size-5'/></a>
+          </div>
         </div>
       </div>
     </div>
