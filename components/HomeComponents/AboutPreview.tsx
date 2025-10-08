@@ -4,7 +4,7 @@ import React from 'react'
 
 const AboutPreview = () => {
     return (
-        <div className='py-8 px-2'>
+        <div className='py-12 md:py-24 px-2 '>
             <div className='flex flex-col items-center text-center mb-8'>
                 <h1 className='text-3xl font-semibold md:text-4xl xl:text-5xl'>What we are?</h1>
                 <p className='text-sm'>Description</p>

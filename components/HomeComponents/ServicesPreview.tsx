@@ -3,7 +3,7 @@ import React from 'react'
 
 const ServicesPreview = () => {
   return (
-    <div className='bg-gray-50 mt-16 py-8 px-2'>
+    <div className='bg-gray-50 mt-16 py-8 px-2 md:py-24'>
       <div className='flex flex-col items-center text-center mb-8'>
         <h1 className='text-3xl font-semibold md:text-4xl xl:text-5xl'>What we do?</h1>
         <p className='text-sm'>Description</p>

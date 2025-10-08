@@ -4,7 +4,7 @@ import React from 'react'
 
 const Updates = () => {
   return (
-    <div className='py-12 px-2'>
+    <div className='py-12 md:py-24 px-2'>
       <div className='flex text-center flex-col'>
         <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2'>Latest Updates</h2>
         <p className=' text-sm mb-4'>Stay informed with our recent news and events</p>
