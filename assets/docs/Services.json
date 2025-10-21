@@ -1,0 +1,214 @@
+{
+  "services": [
+    {
+      "category": "Education Support",
+      "description": "Providing scholarships, mentorship, and resources to underprivileged students, especially in rural villages, to help them continue their studies and fulfill their dreams.",
+      "focus": "Empowering children with hidden talent to escape poverty and achieve self-reliance.",
+      "images": [
+        {
+          "source": "Unsplash",
+          "url": "https://images.unsplash.com/photo-1629872928185-171e13c8e58b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzQyNjR8&ixlib=rb-4.1.0&q=85",
+          "photographer": "Jannik (jaenix)",
+          "note": "Rural school / children image (education & school context)."
+        }
+      ]
+    },
+    {
+      "category": "Health Awareness and Support",
+      "description": "Spreading health awareness among villagers through wellness programs, health camps, and lifestyle awareness initiatives. Providing medical support when needed.",
+      "focus": "Building physically and mentally resilient communities for a healthy, peaceful life.",
+      "images": [
+        {
+          "source": "Unsplash",
+          "url": "https://images.unsplash.com/photo-1669355106052-b7456721510c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzQzMjV8&ixlib=rb-4.1.0&q=85",
+          "photographer": "Getty Images / Unsplash contributor",
+          "note": "Doctor checking blood pressure — suitable for community health camp visuals."
+        }
+      ]
+    },
+    {
+      "category": "Rural Development",
+      "description": "Focused on overall rural development to create self-reliant societies. This includes livelihood programs, infrastructure support, and community empowerment initiatives.",
+      "focus": "Supporting underprivileged people in villages with essential needs.",
+      "images": [
+        {
+          "source": "Unsplash",
+          "url": "https://images.unsplash.com/photo-1750660682677-5bbd2dfa789a?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzQzNjJ8&ixlib=rb-4.1.0&q=85",
+          "photographer": "Multiple (Unsplash community)",
+          "note": "Search results page with multiple rural / community images; swap in a specific photo that best matches your project."
+        }
+      ]
+    },
+    {
+      "category": "Elderly Support",
+      "description": "Providing assistance and care for the elderly in rural areas. This includes health check-ups, social inclusion activities, and basic needs support.",
+      "focus": "Ensuring dignity and well-being for vulnerable members of society.",
+      "images": [
+        {
+          "source": "Unsplash",
+          "url": "https://images.unsplash.com/photo-1707922788250-0ce29dd3fca2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzQ0NDB8&ixlib=rb-4.1.0&q=85",
+          "photographer": "Unsplash contributor",
+          "note": "Portrait of an older person (good for elderly-support communications)."
+        },
+        {
+          "source": "Unsplash",
+          "url": "https://images.unsplash.com/photo-1653669773806-3b6f8b708fc6?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzQ0NzZ8&ixlib=rb-4.1.0&q=85",
+          "photographer": "Unsplash contributor",
+          "note": "Senior couple on a walk — shows dignity and mobility support."
+        }
+      ]
+    },
+    {
+      "category": "Food Aid",
+      "description": "Offering food support to those in immediate need. This includes meal distributions, food packages, and emergency food relief efforts.",
+      "focus": "Temporary relief for poor and underprivileged individuals.",
+      "images": [
+        {
+          "source": "Unsplash",
+          "url": "https://images.unsplash.com/photo-1643321612557-57cef422f401?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzQ1NDR8&ixlib=rb-4.1.0&q=85",
+          "photographer": "Unsplash contributor",
+          "note": "Volunteers preparing food packages (food-aid distribution)."
+        },
+        {
+          "source": "Unsplash",
+          "url": "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzQ1NDR8&ixlib=rb-4.1.0&q=85",
+          "photographer": "Unsplash contributor",
+          "note": "Volunteers packing food — good for event flyers or reports."
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "category": "Education Support",
+      "outcomes": [
+        {
+          "metric": "Students supported",
+          "baseline": "0 (initial)",
+          "target": "100 students/year",
+          "timeline": "12 months",
+          "indicator": "Number of scholarships granted and students enrolled/retained in school"
+        },
+        {
+          "metric": "Academic improvement",
+          "baseline": "Average exam pass rate (local baseline)",
+          "target": "Increase pass rate by 20% for supported students",
+          "timeline": "2 academic years",
+          "indicator": "Change in pass rates and progression to next grade"
+        },
+        {
+          "metric": "Mentorship engagements",
+          "baseline": "0",
+          "target": "Monthly mentorship sessions for 100 students",
+          "timeline": "12 months",
+          "indicator": "Number of mentorship sessions held and mentee satisfaction scores"
+        }
+      ]
+    },
+    {
+      "category": "Health Awareness and Support",
+      "outcomes": [
+        {
+          "metric": "Health camps organized",
+          "baseline": "0",
+          "target": "12 camps/year (1 per month in rotated villages)",
+          "timeline": "12 months",
+          "indicator": "Number of camps and people screened/treated"
+        },
+        {
+          "metric": "Preventive awareness reach",
+          "baseline": "0 people reached",
+          "target": "5,000 villagers/year",
+          "timeline": "12 months",
+          "indicator": "Attendance records + pre/post awareness survey improvement"
+        },
+        {
+          "metric": "Referral & treatment follow-up",
+          "baseline": "No tracking",
+          "target": "90% follow-up for referred cases",
+          "timeline": "Ongoing",
+          "indicator": "Follow-up visit records and treatment completion rates"
+        }
+      ]
+    },
+    {
+      "category": "Rural Development",
+      "outcomes": [
+        {
+          "metric": "Income-generating activities launched",
+          "baseline": "0",
+          "target": "25 community micro-projects (cooperatives / small farms)",
+          "timeline": "18 months",
+          "indicator": "Number of functioning projects and average household income change"
+        },
+        {
+          "metric": "Access to essentials",
+          "baseline": "Baseline community needs assessment",
+          "target": "Improve access to clean water / sanitation for 60% of households in targeted villages",
+          "timeline": "24 months",
+          "indicator": "Infrastructure installed and % households with access"
+        },
+        {
+          "metric": "Local governance capacity",
+          "baseline": "0 training sessions",
+          "target": "Train 100 village leaders in project management & maintenance",
+          "timeline": "12 months",
+          "indicator": "Training attendance and post-training competence assessments"
+        }
+      ]
+    },
+    {
+      "category": "Elderly Support",
+      "outcomes": [
+        {
+          "metric": "Direct assistance visits",
+          "baseline": "0",
+          "target": "Monthly visits to 200 elderly individuals",
+          "timeline": "12 months",
+          "indicator": "Visit logs, basic health checks, and wellbeing scores"
+        },
+        {
+          "metric": "Access to basic healthcare and meds",
+          "baseline": "0",
+          "target": "Ensure 90% of registered elderly have access to essential meds/services",
+          "timeline": "12 months",
+          "indicator": "Pharmacy/referral records and beneficiary feedback"
+        },
+        {
+          "metric": "Social inclusion activities",
+          "baseline": "0 programs",
+          "target": "Quarterly community engagement events for the elderly",
+          "timeline": "12 months",
+          "indicator": "Event attendance and loneliness/wellbeing survey results"
+        }
+      ]
+    },
+    {
+      "category": "Food Aid",
+      "outcomes": [
+        {
+          "metric": "Meals / food packages distributed",
+          "baseline": "0",
+          "target": "12,000 meal-equivalents/year (1,000/month)",
+          "timeline": "12 months",
+          "indicator": "Distribution logs and beneficiary confirmation"
+        },
+        {
+          "metric": "Emergency relief response time",
+          "baseline": "No formal response",
+          "target": "Respond within 48 hours for urgent requests",
+          "timeline": "Ongoing",
+          "indicator": "Average response time and number of emergency kits deployed"
+        },
+        {
+          "metric": "Food security improvement",
+          "baseline": "Baseline household food security score",
+          "target": "Reduce households with severe food insecurity by 30% in targeted villages",
+          "timeline": "18 months",
+          "indicator": "Household surveys and follow-up assessments"
+        }
+      ]
+    }
+  ],
+  "_notes": "Images are Unsplash links (free to use per Unsplash license). Swap photos as needed; for rural development you may want to choose a highly local image to reflect the exact community you serve."
+}
