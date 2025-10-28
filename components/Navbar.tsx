@@ -25,8 +25,8 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 px-4 py-4 transition-all duration-300 ease-in-out ${scrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-lg'
-        : 'bg-transparent'
+      ? 'bg-white/95 backdrop-blur-md shadow-lg'
+      : 'bg-transparent'
       }`}>
       <div className="flex justify-between items-center">
         {/* Logo */}
@@ -42,9 +42,9 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className='hidden md:block'>
-            <h1 className='text-blue-900'>VIDHYA MITRA PEOPLES HELPING TRUST</h1>
-            <p className='text-xs text-blue-600 italic'>(Registered under Trust Act 1882)</p>
+          <div className='hidden lg:block'>
+            <h1 className='text-blue-900 text-xl font-bold'>VIDHYA MITRA PEOPLES HELPING TRUST</h1>
+            <p className='text-sm text-blue-600 italic'>(Registered under Trust Act 1882)</p>
           </div>
         </div>
 
@@ -61,6 +61,12 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <Link
+            href="/donate"
+            className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors duration-200"
+          >
+            Donate
+          </Link>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -98,6 +104,12 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
+              <Link
+                href="/donate"
+                className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors duration-200"
+              >
+                Donate
+              </Link>
             </ul>
           </div>
         )}
