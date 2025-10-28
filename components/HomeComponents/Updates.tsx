@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 
 const Updates = () => {
@@ -15,11 +16,41 @@ const Updates = () => {
       </div>
       <div className='mt-8'>
         <div className='flex flex-wrap gap-8 items-center justify-center'>
-          <img src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  alt="Event 1" className='w-48 bg-gray-100 h-48'/>
-          <img src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  alt="Event 2" className='w-48 bg-gray-100 h-48'/>
-          <img src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  alt="Event 3" className='w-48 bg-gray-100 h-48'/>
-          <img src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  alt="Event 4" className='w-48 bg-gray-100 h-48'/>
-          <img src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  alt="Event 5" className='w-48 bg-gray-100 h-48'/>
+          <Image 
+            src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  
+            alt="Event 1" 
+            width={192}
+            height={192}
+            className='w-48 bg-gray-100 h-48 object-cover'
+          />
+          <Image 
+            src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  
+            alt="Event 2" 
+            width={192}
+            height={192}
+            className='w-48 bg-gray-100 h-48 object-cover'
+          />
+          <Image 
+            src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  
+            alt="Event 3" 
+            width={192}
+            height={192}
+            className='w-48 bg-gray-100 h-48 object-cover'
+          />
+          <Image 
+            src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  
+            alt="Event 4" 
+            width={192}
+            height={192}
+            className='w-48 bg-gray-100 h-48 object-cover'
+          />
+          <Image 
+            src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85"  
+            alt="Event 5" 
+            width={192}
+            height={192}
+            className='w-48 bg-gray-100 h-48 object-cover'
+          />
         </div>
         <div className='mt-12 text-center space-y-2'>
           <h3 className='text-xl font-semibold'>Be a part of our programs</h3>

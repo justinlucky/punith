@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 
 const AboutPreview = () => {
@@ -12,21 +13,30 @@ const AboutPreview = () => {
             <div>
                 <div className='flex flex-col md:flex-row gap-2 lg:gap-8'>
                     <div className='w-full lg:w-1/2 relative mt-12'>
-                        <img 
-                            src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85" 
-                            alt="Service 1" 
-                            className='h-64 md:h-80 lg:h-96 xl:h-[500px] bg-blue-50 w-full object-cover rounded-lg shadow-lg' 
-                        />
-                        <img 
-                            src="https://images.unsplash.com/photo-1760029012684-7cc3800aba71?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85" 
-                            alt="Service 2" 
-                            className='absolute bg-blue-100 h-48 md:h-64 lg:h-72 xl:h-80 w-48 md:w-64 lg:w-72 xl:w-80 top-[-40px] md:top-[-60px] lg:top-[-80px] left-[-10px] md:left-[-20px] object-cover rounded-lg shadow-lg z-10' 
-                        />
-                        <img 
-                            src="https://images.unsplash.com/photo-1757581559818-4509f9ce110c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85" 
-                            alt="Service 3" 
-                            className='absolute bg-blue-100 h-32 md:h-48 lg:h-64 xl:h-72 w-48 md:w-64 lg:w-72 xl:w-80 bottom-[-10px] md:bottom-[80px] lg:bottom-[-40px] right-[-10px] md:right-[20px] object-cover rounded-lg shadow-lg z-10' 
-                        />
+                        <div className='relative h-64 md:h-80 lg:h-96 xl:h-[500px] w-full bg-blue-50 rounded-lg shadow-lg overflow-hidden'>
+                            <Image 
+                                src="https://images.unsplash.com/photo-1758315842590-25693965f805?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85" 
+                                alt="Service 1" 
+                                fill
+                                className='object-cover' 
+                            />
+                        </div>
+                        <div className='absolute relative bg-blue-100 h-48 md:h-64 lg:h-72 xl:h-80 w-48 md:w-64 lg:w-72 xl:w-80 top-[-40px] md:top-[-60px] lg:top-[-80px] left-[-10px] md:left-[-20px] rounded-lg shadow-lg z-10 overflow-hidden'>
+                            <Image 
+                                src="https://images.unsplash.com/photo-1760029012684-7cc3800aba71?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85" 
+                                alt="Service 2" 
+                                fill
+                                className='object-cover' 
+                            />
+                        </div>
+                        <div className='absolute relative bg-blue-100 h-32 md:h-48 lg:h-64 xl:h-72 w-48 md:w-64 lg:w-72 xl:w-80 bottom-[-10px] md:bottom-[80px] lg:bottom-[-40px] right-[-10px] md:right-[20px] rounded-lg shadow-lg z-10 overflow-hidden'>
+                            <Image 
+                                src="https://images.unsplash.com/photo-1757581559818-4509f9ce110c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwNzcxOTd8&ixlib=rb-4.1.0&q=85" 
+                                alt="Service 3" 
+                                fill
+                                className='object-cover' 
+                            />
+                        </div>
                     </div>
                     <div className='w-full lg:w-1/2 flex flex-col gap-2 mt-16'>
                         <h2 className='text-center md:text-left text-primary text-2xl md:text-4xl lg:text-5xl mb-4 pt-8'>Vidhyamitra People’s Helping Trust</h2>
@@ -45,4 +55,4 @@ const AboutPreview = () => {
     )
 }
 
-export default AboutPreview;
+export default AboutPreview

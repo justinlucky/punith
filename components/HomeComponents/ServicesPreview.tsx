@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 import servicesData from '../../assets/docs/Services.json'
 
 const ServicesPreview = () => {
@@ -21,11 +22,12 @@ const ServicesPreview = () => {
               key={svc.category || idx}
               className='flex flex-col md:flex-row-reverse gap-4'
             >
-              <div className='w-full md:w-1/2 h-64 md:h-80 bg-blue-50'>
-                <img
+              <div className='w-full md:w-1/2 h-64 md:h-80 bg-blue-50 relative'>
+                <Image
                   src={imgUrl}
                   alt={svc.category}
-                  className='w-full h-full object-cover'
+                  fill
+                  className='object-cover'
                 />
               </div>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import servicesData from '../../assets/docs/Services.json'
 
 const ServicesDisplay: React.FC = () => {
@@ -27,10 +28,11 @@ const ServicesDisplay: React.FC = () => {
                 className=" max-w-[320px] mx-auto group bg-white rounded-lg shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="relative w-full aspect-square bg-gray-100">
-                  <img
+                  <Image
                     src={img}
                     alt={svc.category}
-                    className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    className="object-cover transform group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4">
