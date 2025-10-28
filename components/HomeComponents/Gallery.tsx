@@ -1,42 +1,43 @@
 import { cn } from "@/lib/utils"
 import { Marquee } from "../ui/marquee"
+import Image from 'next/image'
 
 const reviews = [
   {
     name: "Jack",
     username: "@jack",
     body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    img: "https://images.unsplash.com/photo-1585929511893-ea79c683cfd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2Nzc4Mzl8&ixlib=rb-4.1.0&q=85",
   },
   {
     name: "Jill",
     username: "@jill",
     body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    img: "https://images.unsplash.com/photo-1585929511893-ea79c683cfd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2Nzc4Mzl8&ixlib=rb-4.1.0&q=85",
   },
   {
     name: "John",
     username: "@john",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    img: "https://images.unsplash.com/photo-1585929511893-ea79c683cfd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2Nzc4Mzl8&ixlib=rb-4.1.0&q=85",
   },
   {
     name: "Jane",
     username: "@jane",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
+    img: "https://images.unsplash.com/photo-1585929511893-ea79c683cfd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2Nzc4Mzl8&ixlib=rb-4.1.0&q=85",
   },
   {
     name: "Jenny",
     username: "@jenny",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
+    img: "https://images.unsplash.com/photo-1585929511893-ea79c683cfd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2Nzc4Mzl8&ixlib=rb-4.1.0&q=85",
   },
   {
     name: "James",
     username: "@james",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
+    img: "https://images.unsplash.com/photo-1585929511893-ea79c683cfd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2Nzc4Mzl8&ixlib=rb-4.1.0&q=85",
   },
 ]
 
@@ -65,7 +66,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image className="rounded-full" src={img} alt="" width={32} height={32} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
