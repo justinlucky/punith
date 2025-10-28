@@ -41,12 +41,14 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="relative z-10 flex flex-col items-center gap-4">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="relative z-10 flex flex-wrap items-center gap-8 mt-12 justify-center">
+          <div className="min-w-[200px] h-64 bg-gray-500 opacity-20 "></div>
+          <div className="min-w-[200px] h-64 bg-gray-500 opacity-20 "></div>
+          <div className="min-w-[200px] h-64 bg-gray-500 opacity-20 "></div>
+          <div className="min-w-[200px] h-64 bg-gray-500 opacity-20 "></div>
         </div>
-        <div className="relative z-10 flex flex-col items-center gap-4 mt-8">
+        <div className="h-[1px] w-full bg-gray-500 my-12"/>
+        <div className="relative z-10 flex flex-col items-center gap-4 mt-8 ">
           <div></div>
           <div></div>
         </div>
