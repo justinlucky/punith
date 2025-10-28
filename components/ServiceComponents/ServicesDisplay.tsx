@@ -3,9 +3,30 @@ import Link from 'next/link'
 import Image from 'next/image'
 import servicesData from '../../assets/docs/Services.json'
 
+interface Service {
+  category: string;
+  images?: Array<{ url: string }>;
+  focus?: string;
+  description?: string;
+}
+
+interface Outcome {
+  category: string;
+  outcomes: OutcomeItem[];
+}
+
+interface OutcomeItem {
+  indicator?: string;
+  metric?: string;
+  title?: string;
+  target?: string;
+  timeline?: string;
+  baseline?: string;
+}
+
 const ServicesDisplay: React.FC = () => {
-  const services = servicesData.services || []
-  const outcomes = servicesData.outcomes || []
+  const services: Service[] = servicesData.services || []
+  const outcomes: Outcome[] = servicesData.outcomes || []
 
   return (
     <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
@@ -20,7 +41,7 @@ const ServicesDisplay: React.FC = () => {
         <div className="flex flex-wrap gap-8 ">
           {services.map((svc, idx) => {
             const img = svc.images?.[0]?.url || ''
-            const svcOutcomes = outcomes.find((o: any) => o.category === svc.category)?.outcomes || []
+            const svcOutcomes = outcomes.find((o: Outcome) => o.category === svc.category)?.outcomes || []
 
             return (
               <article
@@ -57,7 +78,7 @@ const ServicesDisplay: React.FC = () => {
                     <div className="mt-4">
                       <h4 className="text-sm font-medium text-gray-700 mb-2">Outcomes & indicators</h4>
                       <ul className="text-xs text-gray-600 space-y-2 max-h-40 overflow-auto pr-2">
-                        {svcOutcomes.map((oc: any, i: number) => {
+                        {svcOutcomes.map((oc: OutcomeItem, i: number) => {
                           const label = oc.indicator || oc.metric || oc.title || `Outcome ${i + 1}`
                           const details = [
                             oc.target ? `Target: ${oc.target}` : null,
