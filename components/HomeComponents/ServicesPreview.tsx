@@ -22,12 +22,12 @@ const ServicesPreview = () => {
               key={svc.category || idx}
               className='flex flex-col md:flex-row-reverse gap-4'
             >
-              <div className='w-full md:w-1/2 h-64 md:h-80 bg-blue-50 relative'>
+              <div className='w-full md:w-1/2 h-64 sm:h-80 bg-blue-50 relative'>
                 <Image
                   src={imgUrl}
                   alt={svc.category}
                   fill
-                  className='object-cover'
+                  className='object-cover h-80'
                 />
               </div>
 

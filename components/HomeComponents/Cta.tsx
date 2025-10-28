@@ -18,18 +18,18 @@ const Cta = () => {
         <p className='text-sm'>Description</p>
       </div>
       <div className='mt-12 flex flex-col gap-4 items-center justify-center'>
-        <div className='flex flex-wrap gap-8 items-center justify-center'>
+        <div className='flex flex-wrap gap-4 items-center justify-center'>
           {overlays.map((text, idx) => (
             <Link href="/" key={idx} className="relative group">
-              <div className="relative w-[150px] h-[150px] group-hover:scale-105 transition-transform duration-300">
+              <div className="relative size-48 group-hover:scale-105 transition-transform duration-300 overflow-hidden rounded-lg">
                 <Image
-                  src="/"
+                  src="https://images.unsplash.com/photo-1760301269447-fbc82b5a8d14?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2NzU4MDl8&ixlib=rb-4.1.0&q=85"
                   alt={text}
-                  width={150}
-                  height={150}
-                  className='object-contain grayscale group-hover:grayscale-0 transition-all duration-300 bg-blue-100 '
+                  width={192}
+                  height={192}
+                  className='w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300'
                 />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300 bg-black bg-opacity-50">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50">
                   <span className="text-white font-semibold text-lg">{text}</span>
                 </div>
               </div>
