@@ -60,7 +60,7 @@ const Footer = () => {
                 <p className='text-sm font-semibold'>Get the latest updates about ChildrenLeftBehind's new updates and programs.</p>
                 <div className='w-full flex flex-col gap-2 py-4'>
                   <Input type='email' placeholder='Enter Your Email...' className="text-sm" />
-                  <Button className='w-full bg-[#832ad1] text-white text-xs hover:bg-[#832add] hover:shadow-md'>Subscribe</Button>
+                  <Button className='w-full bg-blue-700 text-white text-xs hover:bg-blue-800 hover:shadow-md'>Subscribe</Button>
                 </div>
               </div>
             </div>
