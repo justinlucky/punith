@@ -8,7 +8,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from './ui/dropdown-menu'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, ChevronRight } from 'lucide-react'
 import { Separator } from './ui/separator'
 
 const links = [
@@ -79,7 +79,7 @@ const Navbar = () => {
                       <p className='text-xs text-center py-2 text-gray-500'>Services Provided by VPHT</p>
                       <Separator/>
                       {serviceLinks.map((s) => (
-                        <DropdownMenuItem asChild key={s.url} className='grid grid-cols-1'>
+                        <DropdownMenuItem asChild key={s.url} className=''>
                           <Link href={s.url} className="w-full block text-sm cursor-pointer">
                             <div className="flex flex-col">
                               <span className="font-medium text-gray-800">{s.name}</span>
@@ -159,13 +159,13 @@ const Navbar = () => {
                             <li key={s.url}>
                               <Link
                                 href={s.url}
-                                className="block text-gray-700 hover:text-blue-900 text-base"
+                                className=" py-1 block text-gray-700 hover:text-blue-900 text-base flex justify-between"
                                 onClick={() => {
                                   setMobileOpen(false)
                                   setMobileServicesOpen(false)
                                 }}
                               >
-                                {s.name}
+                                {s.name} <ChevronRight className='size-5'/>
                               </Link>
                             </li>
                           ))}

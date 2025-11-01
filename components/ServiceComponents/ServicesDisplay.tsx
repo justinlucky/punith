@@ -12,7 +12,7 @@ const ServicesDisplay: React.FC = () => {
         <header className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-semibold">Our Services</h2>
           <p className="text-sm text-gray-600 mt-2 max-w-2xl mx-auto">
-            Let's together bring light unto the unpreviledged.
+            Lets together bring light unto the unpreviledged.
           </p>
         </header>
 
