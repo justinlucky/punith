@@ -101,16 +101,16 @@ const Navbar = () => {
                       <Separator/>
                       {serviceLinks.map((s) => (
                         <DropdownMenuItem asChild key={s.url} className='p-0 my-1'>
-                          <Link href={s.url} className="w-full block text-sm cursor-pointer py-2 px-3">
+                          <Link href={s.url} className="w-full block text-sm cursor-pointer py-2 px-3 group hover:bg-gray-50 transition-all duration-3s">
                             <div className="flex flex-col">
-                              <span className="font-medium text-gray-700">{s.name}</span>
-                              {s.description ? <span className="text-xs text-gray-500 mt-1">{s.description}</span> : null}
+                              <span className="font-medium text-gray-700 group-hover:text-blue-800">{s.name}</span>
+                              {s.description ? <span className="text-xs text-gray-400 mt-1">{s.description}</span> : null}
                             </div>
                           </Link>
                         </DropdownMenuItem>
                       ))}
                       <DropdownMenuItem asChild>
-                        <Link href="/services" className="w-full block text-sm text-blue-600 py-2 px-3">All services</Link>
+                        <Link href="/services" className="w-full block text-sm text-blue-600 py-2 px-3 hover:bg-gray-50 transition-all duration-3s">All services</Link>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>

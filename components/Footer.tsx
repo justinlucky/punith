@@ -10,8 +10,8 @@ const Footer = () => {
       <div>
         <div className='flex flex-col gap-4'>
           <div className="py-4">
-            <Link href="/" className="text-lg">
-              <span className="font-semibold text-blue-800 text-2xl ">Vidhyamitra</span> People’s Helping Trust
+            <Link href="/" className="text-lg md:text-xl">
+              <span className="font-semibold text-blue-800 text-2xl md:text-4xl">Vidhyamitra</span> People’s Helping Trust
             </Link>
           </div>
           <div>
