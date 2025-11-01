@@ -1,3 +1,4 @@
+
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,11 +20,31 @@ const links = [
 ]
 
 const serviceLinks = [
-  { name: "Student Educational Support", url: "/services/student-educational-support", description: "" },
-  { name: "Health Awarness & Medical Checkup", url: "/services/health-awarness-and-support", description: "" },
-  { name: "Rural Development Program", url: "/services/rural-development-program", description: "" },
-  { name: "Elderly Support Program", url: "/services/elderly-support-program", description: "" },
-  { name: "Food Aid & Relief Campaign", url: "/services/food-and-relief-campaign", description: "" },
+  { 
+    name: "Student Educational Support", 
+    url: "/services/student-educational-support", 
+    description: "Providing scholarships, tutoring, and resources to underprivileged students to enhance their learning opportunities and reduce dropout rates." 
+  },
+  { 
+    name: "Health Awareness & Medical Checkup", 
+    url: "/services/health-awarness-and-support", 
+    description: "Conducting awareness campaigns and free medical checkups to promote community health and prevent diseases among vulnerable populations." 
+  },
+  { 
+    name: "Rural Development Program", 
+    url: "/services/rural-development-program", 
+    description: "Initiatives focused on improving infrastructure, education, and economic opportunities in rural areas for sustainable community growth." 
+  },
+  { 
+    name: "Elderly Support Program", 
+    url: "/services/elderly-support-program", 
+    description: "Offering care services, medical aid, and social engagement activities to ensure dignified and supported living for the elderly." 
+  },
+  { 
+    name: "Food Aid & Relief Campaign", 
+    url: "/services/food-and-relief-campaign", 
+    description: "Distributing essential food supplies and emergency relief to families in need during crises and for ongoing poverty alleviation efforts." 
+  },
 ]
 
 const Navbar = () => {
@@ -75,21 +96,21 @@ const Navbar = () => {
                       </button>
                     </DropdownMenuTrigger>
 
-                    <DropdownMenuContent className="min-w-[220px]">
+                    <DropdownMenuContent className="w-fit max-w-[500px] min-w-[280px] p-2">
                       <p className='text-xs text-center py-2 text-gray-500'>Services Provided by VPHT</p>
                       <Separator/>
                       {serviceLinks.map((s) => (
-                        <DropdownMenuItem asChild key={s.url} className=''>
-                          <Link href={s.url} className="w-full block text-sm cursor-pointer">
+                        <DropdownMenuItem asChild key={s.url} className='p-0 my-1'>
+                          <Link href={s.url} className="w-full block text-sm cursor-pointer py-2 px-3">
                             <div className="flex flex-col">
-                              <span className="font-medium text-gray-800">{s.name}</span>
-                              {s.description ? <span className="text-xs text-gray-500">{s.description}</span> : null}
+                              <span className="font-medium text-gray-700">{s.name}</span>
+                              {s.description ? <span className="text-xs text-gray-500 mt-1">{s.description}</span> : null}
                             </div>
                           </Link>
                         </DropdownMenuItem>
                       ))}
                       <DropdownMenuItem asChild>
-                        <Link href="/services" className="w-full block text-sm text-blue-600">All services</Link>
+                        <Link href="/services" className="w-full block text-sm text-blue-600 py-2 px-3">All services</Link>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>

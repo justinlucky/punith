@@ -28,7 +28,7 @@ const Banner = () => {
   }, [])
 
   return (
-    <div className='relative bg-gray-50 h-80 md:h-[700px] mb-16 overflow-hidden'>
+    <div className='relative h-[350px] sm:h-[500px] md:h-[650px] mb-16 overflow-hidden'>
       {Images.map((img, idx) => (
         <img
           key={idx}
