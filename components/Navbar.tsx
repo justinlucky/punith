@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
 } from './ui/dropdown-menu'
 import { ChevronDown } from 'lucide-react'
+import { Separator } from './ui/separator'
 
 const links = [
   { name: 'Home', href: '/' },
@@ -75,9 +76,11 @@ const Navbar = () => {
                     </DropdownMenuTrigger>
 
                     <DropdownMenuContent className="min-w-[220px]">
+                      <p className='text-xs text-center py-2 text-gray-500'>Services Provided by VPHT</p>
+                      <Separator/>
                       {serviceLinks.map((s) => (
-                        <DropdownMenuItem asChild key={s.url}>
-                          <Link href={s.url} className="w-full block text-sm">
+                        <DropdownMenuItem asChild key={s.url} className='grid grid-cols-1'>
+                          <Link href={s.url} className="w-full block text-sm cursor-pointer">
                             <div className="flex flex-col">
                               <span className="font-medium text-gray-800">{s.name}</span>
                               {s.description ? <span className="text-xs text-gray-500">{s.description}</span> : null}
@@ -150,6 +153,8 @@ const Navbar = () => {
 
                       {mobileServicesOpen && (
                         <ul className="pl-2 space-y-2">
+                          <p className='text-sm text-gray-500 py-2'>Services Provided by VPHT</p>
+                          <Separator/>
                           {serviceLinks.map(s => (
                             <li key={s.url}>
                               <Link
