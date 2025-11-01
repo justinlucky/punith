@@ -1,7 +1,8 @@
 {
   "services": [
     {
-      "category": "Education Support",
+      "url":"/services/student-educational-support",
+      "category": "Student Educational Support",
       "description": "Providing scholarships, mentorship, and resources to underprivileged students, especially in rural villages, to help them continue their studies and fulfill their dreams.",
       "focus": "Empowering children with hidden talent to escape poverty and achieve self-reliance.",
       "images": [
@@ -14,7 +15,8 @@
       ]
     },
     {
-      "category": "Health Awareness and Support",
+      "url":"/services/health-awarness-and-support",
+      "category": "Health Awareness and Medical Check-Up",
       "description": "Spreading health awareness among villagers through wellness programs, health camps, and lifestyle awareness initiatives. Providing medical support when needed.",
       "focus": "Building physically and mentally resilient communities for a healthy, peaceful life.",
       "images": [
@@ -27,7 +29,8 @@
       ]
     },
     {
-      "category": "Rural Development",
+      "url":"/services/rural-development-program",
+      "category": "Rural Development Program",
       "description": "Focused on overall rural development to create self-reliant societies. This includes livelihood programs, infrastructure support, and community empowerment initiatives.",
       "focus": "Supporting underprivileged people in villages with essential needs.",
       "images": [
@@ -40,7 +43,8 @@
       ]
     },
     {
-      "category": "Elderly Support",
+      "url":"/services/elderly-support-program",
+      "category": "Elderly Support Program",
       "description": "Providing assistance and care for the elderly in rural areas. This includes health check-ups, social inclusion activities, and basic needs support.",
       "focus": "Ensuring dignity and well-being for vulnerable members of society.",
       "images": [
@@ -59,7 +63,8 @@
       ]
     },
     {
-      "category": "Food Aid",
+      "url":"/services/food-and-relief-campaign",
+      "category": "Food Aid and Relief Campaign",
       "description": "Offering food support to those in immediate need. This includes meal distributions, food packages, and emergency food relief efforts.",
       "focus": "Temporary relief for poor and underprivileged individuals.",
       "images": [

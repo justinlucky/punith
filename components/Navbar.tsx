@@ -2,6 +2,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from './ui/dropdown-menu'
+import { ChevronDown } from 'lucide-react'
 
 const links = [
   { name: 'Home', href: '/' },
@@ -10,15 +17,21 @@ const links = [
   { name: 'Contact', href: '/contact' },
 ]
 
+const serviceLinks = [
+  { name: "Student Educational Support", url: "/services/student-educational-support", description: "" },
+  { name: "Health Awarness & Medical Checkup", url: "/services/health-awarness-and-support", description: "" },
+  { name: "Rural Development Program", url: "/services/rural-development-program", description: "" },
+  { name: "Elderly Support Program", url: "/services/elderly-support-program", description: "" },
+  { name: "Food Aid & Relief Campaign", url: "/services/food-and-relief-campaign", description: "" },
+]
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0)
-    }
-
+    const handleScroll = () => setScrolled(window.scrollY > 0)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -48,44 +61,73 @@ const Navbar = () => {
           </div>
         </div>
 
-
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-8">
-          {links.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-gray-700 hover:text-blue-900 font-medium transition-colors duration-200 text-sm"
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-          <Link
-            href="/donate"
-            className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors duration-200"
-          >
-            Donate
-          </Link>
+        <ul className="hidden md:flex items-center space-x-6">
+          {links.map((link) => {
+            if (link.name === 'Services') {
+              return (
+                <li key={link.href} className="relative">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button className="flex items-center gap-1 text-gray-700 hover:text-blue-900 font-medium transition-colors duration-200 text-sm">
+                        Services <ChevronDown className="w-4 h-4" />
+                      </button>
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent className="min-w-[220px]">
+                      {serviceLinks.map((s) => (
+                        <DropdownMenuItem asChild key={s.url}>
+                          <Link href={s.url} className="w-full block text-sm">
+                            <div className="flex flex-col">
+                              <span className="font-medium text-gray-800">{s.name}</span>
+                              {s.description ? <span className="text-xs text-gray-500">{s.description}</span> : null}
+                            </div>
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                      <DropdownMenuItem asChild>
+                        <Link href="/services" className="w-full block text-sm text-blue-600">All services</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </li>
+              )
+            }
+
+            return (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-gray-700 hover:text-blue-900 font-medium transition-colors duration-200 text-sm"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            )
+          })}
+
+          <li>
+            <Link
+              href="/donate"
+              className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors duration-200"
+            >
+              Donate
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900"
-          onClick={() => setMobileOpen(!mobileOpen)}
+          onClick={() => {
+            setMobileOpen(!mobileOpen)
+            if (mobileOpen) setMobileServicesOpen(false)
+          }}
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={mobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-            />
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d={mobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
         </button>
 
@@ -95,21 +137,68 @@ const Navbar = () => {
             <ul className="space-y-4">
               {links.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="block text-gray-700 hover:text-blue-900 font-medium transition-colors duration-200 text-base"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
+                  {link.name === 'Services' ? (
+                    <div>
+                      <button
+                        onClick={() => setMobileServicesOpen((v) => !v)}
+                        className="w-full flex items-center justify-between font-medium text-gray-800 mb-2"
+                        aria-expanded={mobileServicesOpen}
+                      >
+                        <span>Services</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : 'rotate-0'}`} />
+                      </button>
+
+                      {mobileServicesOpen && (
+                        <ul className="pl-2 space-y-2">
+                          {serviceLinks.map(s => (
+                            <li key={s.url}>
+                              <Link
+                                href={s.url}
+                                className="block text-gray-700 hover:text-blue-900 text-base"
+                                onClick={() => {
+                                  setMobileOpen(false)
+                                  setMobileServicesOpen(false)
+                                }}
+                              >
+                                {s.name}
+                              </Link>
+                            </li>
+                          ))}
+                          <li>
+                            <Link
+                              href="/services"
+                              className="block text-blue-600 text-base"
+                              onClick={() => {
+                                setMobileOpen(false)
+                                setMobileServicesOpen(false)
+                              }}
+                            >
+                              All services
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="block text-gray-700 hover:text-blue-900 font-medium transition-colors duration-200 text-base"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
-              <Link
-                href="/donate"
-                className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors duration-200"
-              >
-                Donate
-              </Link>
+              <li>
+                <Link
+                  href="/donate"
+                  className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors duration-200"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Donate
+                </Link>
+              </li>
             </ul>
           </div>
         )}

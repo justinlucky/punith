@@ -1,4 +1,38 @@
+import { DollarSign, GraduationCap, HelpingHand, Stethoscope, Users } from 'lucide-react';
 import React from 'react'
+
+const Stats = [
+  {
+    title:"Number of Children Reached",
+    number: 1000,
+    suffix: "+",
+    icon: Users
+  },
+  {
+    title: "Medical Camp and Check-up",
+    number: 100,
+    suffix: "+",
+    icon: Stethoscope
+  },
+  {
+    title: "Number of villages",
+    number: 25,
+    suffix: "+",
+    icon: HelpingHand
+  },
+  {
+    title: "International and National Sponsors",
+    number: 10,
+    suffix: "+",
+    icon: DollarSign
+  },
+  {
+    title: "Children Academic Development",
+    number: 98,
+    suffix: "%",
+    icon: GraduationCap
+  }
+];
 
 const StatsAndAnalytics = () => {
   return (
@@ -10,27 +44,18 @@ const StatsAndAnalytics = () => {
           We believe in the power of collective action to create positive change in our communities and beyond.
         </h2>
       </div>
-      <div className=' mt-12 flex flex-wrap items-center justify-center gap-12 md:gap-24 max-w-4xl mx-auto'>
-        <div className='flex flex-col items-center justify-center gap-2'>
-          <h3 className='text-lg'>Content</h3>
-          <p className='text-5xl font-extrabold md:text-6xl lg:text-7xl'>1200+</p>
-        </div>
-        <div className='flex flex-col items-center justify-center gap-2'>
-          <h3 className='text-lg'>Content</h3>
-          <p className='text-5xl font-extrabold md:text-6xl lg:text-7xl'>1200+</p>
-        </div>
-        <div className='flex flex-col items-center justify-center gap-2'>
-          <h3 className='text-lg'>Content</h3>
-          <p className='text-5xl font-extrabold md:text-6xl lg:text-7xl'>98%</p>
-        </div>
-        <div className='flex flex-col items-center justify-center gap-2'>
-          <h3 className='text-lg'>Content</h3>
-          <p className='text-5xl font-extrabold md:text-6xl lg:text-7xl'>1200+</p>
-        </div>
-        <div className='flex flex-col items-center justify-center gap-2'>
-          <h3 className='text-lg'>Content</h3>
-          <p className='text-5xl font-extrabold md:text-6xl lg:text-7xl'>100%</p>
-        </div>
+      <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-2'>
+        {Stats.map((stat, idx) => (
+          <div key={idx} className='flex items-center gap-4 bg-orange-50 px-2 py-4 rounded-md shadow-md hover:scale-102 transition-all duration-3s group'>
+            <div className='bg-blue-700 text-white p-2 rounded-md'>
+              <stat.icon className='group-hover:size-7 transition-all duration-3s'/>
+            </div>
+            <div>
+              <h3 className='text-xl'><span className='text-3xl font-bold'>{stat.number}</span>{stat.suffix}</h3>
+              <p className='text-sm text-gray-500 pt-2'>{stat.title}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
